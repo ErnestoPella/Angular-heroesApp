@@ -4,7 +4,7 @@
         <h1>Buscador de heroes</h1>
         <mat-divider></mat-divider>
     </div>
-    <div>
+    <div fxLayout="column">
         <h3>Buscador</h3>
 
        
@@ -20,12 +20,18 @@
                 <mat-option *ngFor="let heroe of heroes" [value]="heroe">
                     {{heroe.superhero}}
                 </mat-option>
+
+                <mat-option value="" *ngIf="heroes.length === 0 && termino.length > 0 ">
+                    No se encuentra nada con el termino {{termino}}
+                </mat-option>
+
             </mat-autocomplete>
         </mat-form-field>
     
     </div>
 
-    <div>
-        <pre> {{heroeSeleccionado | json}}</pre>
+    <div *ngIf="heroeSeleccionado" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="lefth" fxLayoutGap="20px" fxFlex="20" fxFlex.lg="15" fxFlex.sm="30">
+        <app-heroe-tarjeta [heroe]="heroeSeleccionado"></app-heroe-tarjeta>
     </div>
+    
 </div>
