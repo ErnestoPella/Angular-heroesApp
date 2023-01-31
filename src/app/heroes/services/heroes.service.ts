@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class HeroesService {
-
+  
   constructor( private http: HttpClient) { }
 
   getHeroes(): Observable<Heroe[]>{
