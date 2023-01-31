@@ -18,4 +18,8 @@ export class HeroesService {
     return this.http.get<Heroe>(`http://localhost:3000/heroes/${id}`);
   }
 
+  getSugerencias(id: string): Observable<Heroe[]>{
+    return this.http.get<Heroe[]>(`http://localhost:3000/heroes?q=${id}&_limit=6`);
+  }
+
 }
