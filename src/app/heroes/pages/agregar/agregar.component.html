@@ -41,20 +41,22 @@
         
         <br>
 
-        <div fxLayout>
+        <div fxLayout="row" fxFlex="100">
             <button mat-raised-button 
                     (click)="guardar()" 
-                    color="primary">
+                    color="primary"
+                    fxFlex="40">
                 <mat-icon>edit</mat-icon>
                 Guardar
             </button>
             
-            
+            <span class="spacer"></span>
             
             <button *ngIf="heroe.id" 
                     mat-raised-button 
                     (click)="eliminarHeroe()" 
-                    color="warn">
+                    color="warn" 
+                    fxFlex="40">
                 <mat-icon>remove</mat-icon>
                 Eliminar
             </button>

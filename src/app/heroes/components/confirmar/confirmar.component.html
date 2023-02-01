@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>Estas seguro</h1>
+<hr>
+<p mat-dialog-content>
+    Esta a punto de borrar a ABCC
+    <br>
+    ?Desea Continuar?
+</p>
+<div mat-dialog-actions>
+    <button mat-button (click)="eliminarHeroe()" color="warn">Si, borrar</button>
+    <button mat-button (click)="cerrar()" color="warn" cdkFocusInitial>Cancelar</button>
+</div>
