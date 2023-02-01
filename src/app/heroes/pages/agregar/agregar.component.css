@@ -2,3 +2,7 @@ img{
     width: 100%;
     border-radius: 5px;
 }
+
+.spacer{
+    flex: 1 1 auto;
+}
