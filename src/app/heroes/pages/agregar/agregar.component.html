@@ -1,4 +1,8 @@
-<h1>Nuevo heroe <small>{{ heroe.superhero }}</small></h1>
+<h1>
+    {{( heroe.id )?'Editar' : 'Nuevo' }} 
+    Héroe 
+    <small>{{ heroe.superhero }}</small>
+</h1>
 
 <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="40px">
 
@@ -47,7 +51,7 @@
                     color="primary"
                     fxFlex="40">
                 <mat-icon>edit</mat-icon>
-                Guardar
+                {{(heroe.id)? 'Actualizar' :'Guardar' }}
             </button>
             
             <span class="spacer"></span>
