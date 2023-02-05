@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environments } from '../../../environments/environment';
 import { Auth } from '../interfaces/auth.interface';
-import { tap } from 'rxjs/operators';
+import { tap, map } from 'rxjs/operators';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -28,4 +29,25 @@ export class AuthService {
       })
     );
   }
+
+  verificaAutenticacion(): Observable<boolean>{
+
+    if( !localStorage.getItem('id') ){
+      return of(false);
+    }
+
+    return this.http.get<Auth>(`${ this.baseUrl }/usuarios/1`)
+    .pipe(
+      map(auth => {
+        this._auth = auth;
+        return true;
+      })
+    );
+  }
+
+
+  logout(){
+    this._auth =undefined;
+  }
+
 }

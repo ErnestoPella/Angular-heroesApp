@@ -14,8 +14,8 @@ export class LoginComponent {
   constructor(private router:Router,
               private authService: AuthService){}
 
-  login(){
 
+  login(){
     this.authService.login()
     .subscribe(resp => {
       console.log(resp);
@@ -25,6 +25,11 @@ export class LoginComponent {
       }
     })
     //
+  }
+
+  sinLogin(){
+    this.authService.logout();
+    this.router.navigate(['./heroes']);
   }
 
 }
