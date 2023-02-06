@@ -1,12 +1,22 @@
 
-<mat-grid-list cols="2">
-    <mat-grid-tile>
-        <button mat-raised-button color="primary" (click)="login()">
+<mat-grid-list cols="2" rowHeight="50%">
+    <mat-grid-tile class="marvel">
+        <img src="https://1000marcas.net/wp-content/uploads/2021/07/Marvel-Comics-logo-500x281.png">
+    </mat-grid-tile>   
+    <mat-grid-tile class="dc">
+        <img src="https://1000marcas.net/wp-content/uploads/2020/03/DC-Comics-Logo-600x338.png">
+    </mat-grid-tile> 
+    <mat-grid-tile
+      [colspan]=2
+      [rowspan]=1>
+        <button mat-raised-button color="primary" (click)="login()" id="ingresar">
             Ingresar
         </button>
-
+        
         <button mat-raised-button color="primary" (click)="sinLogin()">
             Ingresar sin login
         </button>
-    </mat-grid-tile>    
+    </mat-grid-tile>
+        
+    
 </mat-grid-list>

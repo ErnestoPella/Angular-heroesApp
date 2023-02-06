@@ -1,21 +1,14 @@
-<p>error-page works!</p>
 
-<ul>
-    <li>
-        <a routerLink="/auth/login">
-            Ir a login
-        </a>
-    </li>
-
-    <li>
-        <a routerLink="/auth/registro">
-            Ir a Registro
-        </a>
-    </li>
-
-    <li>
-        <a routerLink="/heroes/listado">
-            Ir a Heroes
-        </a>
-    </li>
-</ul>
+<mat-grid-list cols="1" rowHeight="100%">
+    <mat-grid-tile>
+        <div fxLayout="row" fxFlex="100">
+            <div fxFlex="100" >
+                <h1>404</h1>
+            </div>
+            <button mat-flat-button color="primary" routerLink="/auth/login" id="login">Ir a login</button>                
+            <button mat-flat-button color="primary" routerLink="/heroes/listado">Ir a Heroes</button>
+        </div>
+        <img src="https://media.tenor.com/ex3PolhehqkAAAAi/joker-batman.gif">
+        
+    </mat-grid-tile>
+</mat-grid-list>

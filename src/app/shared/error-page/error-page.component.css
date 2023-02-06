@@ -1,0 +1,12 @@
+*{
+    background-color: #303030;
+}
+h1{
+    font-size: 1000%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 70px;
+}
+
+#login{
+    margin-right: 20px;
+}
